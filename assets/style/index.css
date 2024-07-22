@@ -49,6 +49,10 @@ img {
 }
 
 /*~~~~~~~$ Global Styling $~~~~~~~*/
+section{
+    margin-bottom: 5rem;
+}
+
 .container {
     max-width: 1140px; 
     margin: 0 auto;
@@ -178,18 +182,45 @@ aside article p{
 }
 
 
+/*~~~~~~~$ Aricles Styling $~~~~~~~*/
 
-/* Small screens (phones) */
-@media (max-width: 768px) {
-    .container {
-      padding: 0 10px; /* Adjust padding for smaller screens */
-    }
-  }
-  
-  /* Extra small screens (very small phones) */
-  @media (max-width: 480px) {
-    .container {
-      padding: 0 5px; /* Adjust padding for even smaller screens */
-    }
-  }
-  
+.articles .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.articles .container article{
+    height: 7rem;
+    display: flex;
+    column-gap: 1.5rem;
+}
+
+.articles .container article div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 0.5rem;
+}
+
+.articles .container span{
+    font-size: 2rem;
+    color: var(--orange-color);
+    font-weight: bold;
+}
+
+.articles .container article h4{
+    font-size: 1rem;
+    color: var(--primary-color);
+    text-transform: capitalize;
+    transition: all 0.3s ease-in-out; 
+}
+
+.articles .container article h4:hover{
+    color: var(--orange-color-color);
+}
+
+.articles .container article p{
+    font-size: 0.8rem;
+    color: var(--gray-color);
+    line-height: 1.5;
+}
