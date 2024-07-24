@@ -97,7 +97,7 @@ nav ul li a:hover{
 /*~~~~~~~$ Hero Styling $~~~~~~~*/
 .hero .container{
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 1.5rem;
 }
 
@@ -185,8 +185,11 @@ aside article p{
 /*~~~~~~~$ Aricles Styling $~~~~~~~*/
 
 .articles .container{
-    display: flex;
-    justify-content: space-between;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
 }
 
 .articles .container article{
@@ -224,3 +227,125 @@ aside article p{
     color: var(--gray-color);
     line-height: 1.5;
 }
+
+/*~~~~~~~~$ Media Queries for Responsive Design $~~~~~~~~*/
+
+/*~~~~~~~$ Media Query for Tablets (Portrait) $~~~~~~~*/
+@media (max-width: 768px) {
+    nav ul {
+      column-gap: 1rem;
+    }
+  
+    .hero .container {
+      grid-template-columns: 1fr;
+    }
+  
+    .hero__body {
+      gap: 2rem;
+      flex-direction: column;
+    }
+  
+    .hero__body h1 {
+      font-size: 2rem;
+    }
+  
+    .hero__body div {
+      width: 100%;
+    }
+  
+    aside h2 {
+      font-size: 2rem;
+    }
+  
+    .articles .container {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .articles .container article {
+      height: auto;
+      flex-direction: column;
+      row-gap: 1rem;
+    }
+  
+    .articles .container span {
+      font-size: 1.5rem;
+    }
+  
+    .articles .container article h4 {
+      font-size: 0.9rem;
+    }
+  
+    .articles .container article p {
+      font-size: 0.7rem;
+    }
+  }
+  
+  /*~~~~~~~$ Media Query for Mobile Phones $~~~~~~~*/
+  @media (max-width: 480px) {
+    nav ul {
+      flex-direction: column;
+      row-gap: 1rem;
+    }
+  
+    nav ul li a {
+      font-size: 0.9rem;
+    }
+  
+    .hero__body h1 {
+      font-size: 1.5rem;
+    }
+  
+    .hero__body div a {
+      padding: 0.8rem 1.5rem;
+      font-size: 0.7rem;
+    }
+  
+    aside h2 {
+      font-size: 1.5rem;
+    }
+  
+    aside h3 {
+      font-size: 0.9rem;
+    }
+  
+    .articles .container {
+      grid-template-columns: 1fr;
+    }
+  
+    .articles .container article {
+      height: auto;
+      flex-direction: column;
+    }
+  
+    .articles .container span {
+      font-size: 1.2rem;
+    }
+  
+    .articles .container article h4 {
+      font-size: 0.8rem;
+    }
+  
+    .articles .container article p {
+      font-size: 0.6rem;
+    }
+  }
+  
+  /*~~~~~~~$ Media Query for Larger Screens $~~~~~~~*/
+  @media (min-width: 1141px) {
+    .hero__body h1 {
+      font-size: 4rem;
+    }
+  
+    .articles .container span {
+      font-size: 2.5rem;
+    }
+  
+    .articles .container article h4 {
+      font-size: 1.2rem;
+    }
+  
+    .articles .container article p {
+      font-size: 1rem;
+    }
+  }
+  
